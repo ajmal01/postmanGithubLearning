@@ -24,7 +24,7 @@ jobs:
     - name: Install Newman
       run: npm install -g newman  # Install Newman globally.
 
-      - name: Run Postman collection
+    - name: Run Postman collection
       run: |
         newman run ./API_Collections/MyCollection1.postman_collection.json 
 
