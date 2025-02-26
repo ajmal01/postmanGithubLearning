@@ -30,4 +30,4 @@ jobs:
     - name: Saving report
       uses: actions/upload-artifact@v4
       with:
-      path: ./results/report.html
+      path: ./report.html
