@@ -33,7 +33,7 @@ jobs:
         newman run ./API_Collections/MyCollection1.postman_collection.json -r cli,htmlextra --reporter-htmlextra-export ./results/report.html
     
     - name: Store results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with: 
           name: Reports
           path: ./results
