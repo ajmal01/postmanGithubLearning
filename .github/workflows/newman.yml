@@ -1,1 +1,30 @@
+name: Run Postman Collection with Newman
+
+on:
+  push:
+    branches:
+      - main  # Trigger this workflow on pushes to the main branch.
+  pull_request:
+    branches:
+      - main  # Trigger this workflow on pull requests targeting the main branch.
+
+jobs:
+  run_postman_collection:
+    runs-on: ubuntu-latest  # You can also use other environments like macOS or Windows if needed.
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4  # Checkout the code from the repo
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '20.15'  # Specify the Node.js version (adjust as needed)
+
+    - name: Install Newman
+      run: npm install -g newman  # Install Newman globally.
+
+      - name: Run Postman collection
+      run: |
+        newman run ./API_Collections/MyCollection1.postman_collection.json 
 
