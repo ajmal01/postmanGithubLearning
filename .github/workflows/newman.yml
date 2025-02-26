@@ -30,5 +30,4 @@ jobs:
     - name: Saving report
       uses: actions/upload-artifact@v4
       with:
-      name: postman-test-file  # The name of the artifact
       path: ./results/report.html
